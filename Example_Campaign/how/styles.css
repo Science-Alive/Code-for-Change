@@ -1,0 +1,157 @@
+/* --- Basic Setup (Shared Styles) --- */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff; /* Very light blue for action focus */
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header & Navigation CSS would be identical to Site 1 & 2 */
+header {
+  background-color: #0077b6; /* Clean blue */
+  color: white;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header.scrolled {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 1.2em; /* Made slightly smaller for "Fan-Made Campaign" */
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffd700; /* Yellow hover for contrast */
+}
+/* --- Action Hero Section --- */
+#action-hero {
+  padding: 40px 0;
+  text-align: center;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 30px;
+}
+
+#action-hero h1 {
+  color: #0077b6;
+  font-size: 2.5em;
+}
+
+/* --- Official Sign-Up Section (Primary CTA Focus) --- */
+#signup-official {
+  text-align: center;
+  background-color: #e8f5e9; /* Light green for "GO" */
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.cta-primary {
+  margin-top: 20px;
+}
+
+.signup-button {
+  /* Bold, unmissable button styling */
+  display: inline-block;
+  background-color: #4caf50; /* Green for "Go" */
+  color: white;
+  padding: 20px 45px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1.4em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.signup-button:hover {
+  background-color: #388e3c;
+}
+
+/* --- JavaScript Tracker Section (Functional Design) --- */
+#book-tracker {
+  text-align: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tracker-box {
+  margin: 20px auto;
+  padding: 20px;
+  border: 3px solid #ff9800; /* Orange border for the tracker */
+  border-radius: 10px;
+  display: inline-block; /* Makes the box wrap content */
+}
+
+#bookCountDisplay {
+  display: block;
+  font-size: 3em;
+  font-weight: bold;
+  color: #ff9800;
+  margin-top: 10px;
+}
+
+#addBookButton {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 10px;
+}
+
+#addBookButton:hover {
+  background-color: #f57c00;
+  transform: translateY(-2px);
+}
+
+/* --- Final Resources Section --- */
+#resources {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.recommendations {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.recommendations li a {
+  color: #0077b6;
+  text-decoration: none;
+  padding: 5px 0;
+  display: block;
+  border-bottom: 1px dotted #ccc;
+}

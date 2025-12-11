@@ -1,0 +1,153 @@
+/* --- Basic Setup (Same as other pages) --- */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e6f7ff; 
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header & Navigation CSS would be identical to Site 1 */
+header {
+  background-color: #0077b6; /* Clean blue */
+  color: white;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header.scrolled {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 1.2em; /* Made slightly smaller for "Fan-Made Campaign" */
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffd700; /* Yellow hover for contrast */
+}
+
+/* --- Hero Section --- */
+#why-hero {
+  padding: 40px 0;
+  text-align: center;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 30px;
+}
+
+#why-hero h1 {
+  color: #1e88e5; /* A deep, energetic blue */
+  font-size: 3em;
+}
+
+/* --- Literacy Facts (Hover Effect Focus) --- */
+#literacy-facts h2 {
+  text-align: center;
+  color: #ff6f00;
+}
+
+.fact-cards-grid {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.fact-card {
+  flex-basis: 33.33%;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  color: white; 
+
+  /* *NEW: Setup for the transition effect* */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* *NEW: Hover Effect* */
+.fact-card:hover {
+  transform: translateY(-5px); /* Lifts the card up */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25); /* Stronger shadow */
+  cursor: pointer; /* Indicates it's interactive */
+}
+
+/* Specific colors for visual separation */
+.red-bg { background-color: #e53935; } 
+.blue-bg { background-color: #1e88e5; }
+.green-bg { background-color: #43a047; }
+
+.fact-card h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 10px;
+}
+
+
+/* --- Prizes List Styling (FLEXBOX for Equal Size Focus) --- */
+#prizes {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.prize-list {
+  list-style-type: none;
+  padding: 0;
+
+  /* *NEW: FLEXBOX to make boxes same size* */
+  display: flex;
+  justify-content: space-around;
+  gap: 15px; /* Spacing between the items */
+  margin: 20px 0;
+  text-align: center;
+}
+
+.prize-item {
+  /* *NEW: Flex Grow/Basis* - Flex-basis sets the minimum size, flex-grow allows them to expand equally */
+  flex-grow: 1;
+  flex-basis: 0; 
+
+  padding: 20px 10px;
+  border: 3px solid #ff6f00; /* Orange border to highlight prizes */
+  border-radius: 8px;
+  background-color: #fff8e1; /* Very light yellow background */
+  font-size: 1.1em;
+  font-weight: 600;
+
+  /* Optional: Subtle hover on prizes */
+  transition: background-color 0.2s;
+}
+
+.prize-item:hover {
+  background-color: #ffe082;
+}
+
+.source-note {
+  text-align: center;
+  font-style: italic;
+  color: #777;
+  margin-top: 20px;
+}

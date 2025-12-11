@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Action: Start Reading Now! | Fan-Made Campaign</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <header>
+      <div class="logo">Fan-Made Campaign: NWPL Summer Reads!</div>
+      <nav>
+        <a href="../what/index.html">Teen Summer Reading Club</a> 
+        <a href="../why/index.html">Why should you read</a>
+        <a href="../how/index.html">How to join</a>
+      </nav>
+    </header>
+
+    <main class="container">
+
+      <section id="action-hero">
+        <h1>It's Time To Get Started!</h1>
+        <h2>Sign up at your nearest library to receive a reading log and start recording your reading journey!</h2>
+      </section>
+
+      <!-- Official Sign-Up Section -->
+      <section id="signup-official">
+        <h2></h2>
+
+      </section>
+
+      <section id="signup-official">
+        <h2>Step 1: The Official Link</h2>
+        <p>Don't wait! The NWPL does all the official registration. Click the button below to be taken straight to their page.</p>
+
+        <!-- Key Call-to-Action -->
+        <div class="cta-primary">
+          <a href="https://www.nwpl.ca/youth/summer-reading-club/teen-summer-reading-club/" target="_blank" class="signup-button">Go To Official NWPL Sign-Up Page</a>
+        </div>
+      </section>
+
+      <!-- JavaScript Interactive Component Highlight -->
+      <section id="book-tracker">
+        <h2>Step 2: Start Tracking Your Progress!</h2>
+        <p>Need motivation? Use our simple, fun tracker below to click every time you finish a book. **This is your personal log and motivation tool!**</p>
+
+        <div class="tracker-box">
+          <p>Total Books Read:</p>
+          <!-- Target for JS DOM Manipulation -->
+          <span id="bookCountDisplay">0</span>
+        </div>
+
+        <!-- Button that calls the JS function -->
+        <button id="addBookButton">Finished a Book! Click to Add (+1)</button>
+      </section>
+
+      <!-- Final Resources Section -->
+      <section id="resources">
+        <h2>Need a Book Recommendation?</h2>
+        <p>Not sure what to read first? Check out the TSRC's official list or grab one of these amazing suggestions!</p>
+
+        <ul class="recommendations">
+          <li><a href="https://newwestminster.bibliocommons.com/explore/featured_lists/teacher_picks" target="_blank">NWPL Staff Picks for Teens</a></li>
+          <li><a href="https://www.nypl.org/books-more/recommendations/125/teens" target="_blank">125 Books for Teens</a></li>
+          <li><a href="https://www.goodreads.com/list/show/43.Best_Young_Adult_Books" target="_blank">Goodreads YA List</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>A Fan-Made Campaign in support of the NWPL Teen Summer Reading Club. &copy; 2025 Built by Danny Yu.</p>
+    </footer>
+    <script src="bookCounter.js" defer></script>
+  </body>
+</html>

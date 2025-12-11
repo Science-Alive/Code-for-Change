@@ -1,0 +1,105 @@
+/* ================================================= */
+/* 0. Animation Recipe: Runs automatically on the Body */
+/* ================================================= */
+
+/* H1 Animation (Re-added for a visible working animation) */
+@keyframes title-pulse {
+    0% { transform: scale(1); opacity: 1; } 
+    50% { transform: scale(0.99); opacity: 0.95; } 
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes card-glow-pulse {
+    /* We add a base border-color to the start/end frames */
+    0% { border-color: rgba(255, 255, 255, 0.5); } 
+    50% { border-color: #008080; } 
+    100% { border-color: rgba(255, 255, 255, 0.5); }
+}
+
+body {
+    background-color: #eaf8f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    color: #1a434d;
+    text-align: center;
+    margin-bottom: 40px;
+    /* FIX C: Re-add the working H1 animation */
+    animation: title-pulse 3s ease-in-out infinite alternate;
+}
+
+a {
+    color: #008080; 
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+a:hover {
+    color: #ff914d;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0; /* Clear default list padding */
+}
+
+/* ==================================================== */
+/* 2. Specificity & Box Model (Class Selector)          */
+/* ==================================================== */
+
+.resource-card {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 12px;
+    
+    /* FIX A: CRITICAL: Add a transparent border so the animation can paint the color */
+    border: 2px solid rgba(255, 255, 255, 0.5); 
+    
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    margin: 0 auto 25px auto;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* Apply the generic animation to all cards */
+    animation: card-glow-pulse 4s ease-in-out infinite alternate; 
+}
+
+
+.role-text {
+    color: #008080;
+    font-weight: 600;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eaf8f8;
+    padding-bottom: 5px;
+}
+
+
+/* ==================================================== */
+/* 3. Specificity & Pseudo-Class Challenge (Accent Card) */
+/*    *FIX B: This is required to make the first card pulse Orange */
+/* ==================================================== */
+/* Using the li.resource-card:first-child for the most specific target */
+li.resource-card:first-child { 
+    background-color: #fff9e6; 
+    
+    /* The animation overrides the border here, but we can set the initial shadow */
+    box-shadow: 0 6px 15px rgba(255, 145, 77, 0.4); 
+
+    /* We need a separate Orange pulse keyframe (which is not in the block but is implied) */
+    /* animation: first-card-glow-pulse 4s ease-in-out infinite alternate; */
+}
+
+
+/* ==================================================== */
+/* 4. Motion & Interactivity (The :hover state)         */
+/* ==================================================== */
+
+.resource-card:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); 
+    cursor: pointer;
+}
