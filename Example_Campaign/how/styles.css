@@ -62,7 +62,7 @@ nav a:hover {
 }
 
 /* --- Official Sign-Up Section (Primary CTA Focus) --- */
-#signup-official {
+#action-steps {
   text-align: center;
   background-color: #e8f5e9; /* Light green for "GO" */
   padding: 30px;
@@ -154,4 +154,135 @@ nav a:hover {
   padding: 5px 0;
   display: block;
   border-bottom: 1px dotted #ccc;
+}
+
+.recommendations li a:hover {
+  color: #f57c00;
+}
+
+/* --- Dynamic Quiz Styling (The Focus) --- */
+#genre-quiz {
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.quiz-container {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* --- Question and Option Styling --- */
+#quiz-area {
+    min-height: 150px; /* Ensure space doesn't collapse when content changes */
+    padding-bottom: 10px;
+    transition: opacity 0.5s ease; /* Subtle transition for question change */
+}
+
+#quiz-area h3 {
+    color: #0077b6;
+    margin-top: 0;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.radio-option {
+    display: block; /* Each option on a new line */
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.radio-option:hover {
+    background-color: #e6f7ff; /* Light blue on hover */
+    border-color: #0077b6;
+}
+
+/* Hide the default radio circle and use custom styling */
+input[type="radio"] {
+    margin-right: 10px;
+    /* You could add more complex custom radio button styling here */
+}
+
+/* --- Navigation Button --- */
+#nextButton,
+#quiz-area button { /* Targets both 'Next' and 'Start Over' */
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 0px;
+    display: block; /* Make the button full width for prominence */
+    width: 100%;
+}
+
+#nextButton:hover,
+#quiz-area button:hover {
+    background-color: #f57c00;
+}
+
+
+/* --- Result Styling --- */
+.result-box {
+    margin-top: 20px;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Specific Result Styling (for the JS to set) */
+.fantasy-result { 
+    background-color: #e3f2fd; /* Very light blue */
+    color: #1a237e; /* Darker text for contrast */
+    border: 2px solid #90caf9;
+} 
+.graphic-result { 
+    background-color: #fbe9e7; /* Light terracotta/pink */
+    color: #4e342e; /* Dark brown text */
+    border: 2px solid #ffab91;
+}
+.mystery-result { 
+    background-color: #eeeeee; /* Light grey/off-white */
+    color: #212121; /* Darkest text */
+    border: 2px solid #9e9e9e;
+}
+.nonfiction-result { 
+    background-color: #e8f5e9; /* Light green */
+    color: #388e3c; /* Darker green text */
+    border: 2px solid #a5d6a7;
+}
+
+/* Styling for the error state (from the JS) */
+.quiz-container #resultOutput {
+    background-color: #ffcdd2; /* Light red background for error */
+    color: #b71c1c; /* Dark red text */
+    border: 2px solid #e57373;
+}
+
+.result-box h3 {
+    margin-top: 0;
+}
+
+
+/* --- Progress Bar --- */
+#progress-area {
+    text-align: right;
+    font-style: italic;
+    color: #777;
+    padding-top: 10px;
+    border-top: 1px dashed #ccc;
+    margin-top: 15px;
 }

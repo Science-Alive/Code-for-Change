@@ -25,13 +25,23 @@
       </section>
 
       <!-- Official Sign-Up Section -->
-      <section id="signup-official">
-        <h2></h2>
-
+      <section id="action-steps">
+        <h2>Step 1: Sign Up</h2>
+        <p>Register for TSRC by picking up a Reading Log from a New West Library.</p>
       </section>
 
-      <section id="signup-official">
-        <h2>Step 1: The Official Link</h2>
+      <section id="action-steps">
+        <h2>Step 2: Choose A Daily Reading Goal</h2>
+        <p>Choose an achievable daily reading goal. A good start is 30 mins a day.</p>
+      </section>
+
+      <section id="action-steps">
+        <h2>Step 3: Track Your Reading</h2>
+        <p>Mark your Reading Log for every day that you reach your reading goal.</p>
+      </section>
+
+      <section id="action-steps">
+        <h2>For More Info</h2>
         <p>Don't wait! The NWPL does all the official registration. Click the button below to be taken straight to their page.</p>
 
         <!-- Key Call-to-Action -->
@@ -41,18 +51,24 @@
       </section>
 
       <!-- JavaScript Interactive Component Highlight -->
-      <section id="book-tracker">
-        <h2>Step 2: Start Tracking Your Progress!</h2>
-        <p>Need motivation? Use our simple, fun tracker below to click every time you finish a book. **This is your personal log and motivation tool!**</p>
+      <section id="genre-quiz">
+        <h2>Step 2: Find Your Next Read!</h2>
+        <p>Answer a few quick questions to get a personalized genre recommendation for your first TSRC book.</p>
 
-        <div class="tracker-box">
-          <p>Total Books Read:</p>
-          <!-- Target for JS DOM Manipulation -->
-          <span id="bookCountDisplay">0</span>
+        <div class="quiz-container">
+
+          <!-- This area will be dynamically managed by JavaScript -->
+          <div id="quiz-area">
+            <!-- Content (questions/results) will be injected here -->
+            <p>Loading Quiz...</p>
+          </div>
+
+          <div id="progress-area">
+            <!-- Progress bar or step indicator -->
+            <p>Question <span id="current-step">0</span> of <span id="total-steps">0</span></p>
+          </div>
+
         </div>
-
-        <!-- Button that calls the JS function -->
-        <button id="addBookButton">Finished a Book! Click to Add (+1)</button>
       </section>
 
       <!-- Final Resources Section -->
@@ -71,6 +87,6 @@
     <footer>
       <p>A Fan-Made Campaign in support of the NWPL Teen Summer Reading Club. &copy; 2025 Built by Danny Yu.</p>
     </footer>
-    <script src="bookCounter.js" defer></script>
+    <script src="bookQuiz.js" defer></script>
   </body>
 </html>
