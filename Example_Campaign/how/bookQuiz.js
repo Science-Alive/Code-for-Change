@@ -105,7 +105,7 @@ ${option.text}
     // Final DOM update with the result
     quizArea.innerHTML = `
 <div class="${resultClass}">
-  <h3>🎉 TSRC Recommendation!</h3>
+  <h3>🎉 Genre Recommendation!</h3>
   <p>${recommendation}</p>
   <p>Head to the library's official site to search this genre!</p>
 </div>
