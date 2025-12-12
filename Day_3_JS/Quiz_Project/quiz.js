@@ -17,7 +17,7 @@ function updateScore() {
     // 2. DOM Manipulation: Find ALL radio buttons on the page
     const allRadioInputs = document.querySelectorAll('input[type="radio"]');
 
-    // 3. Loop through all inputs (Day 3 Loop)
+    // 3. Loop through all inputs 
     allRadioInputs.forEach(radio => {
         // 4. Conditional Check: If this radio button is selected...
         if (radio.checked) {
