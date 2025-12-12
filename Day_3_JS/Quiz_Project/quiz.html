@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Mission: Volunteer Fit Quiz</title>
+    <!-- CSS Link: Contains minimal, necessary styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <h1>Code for Change Mission Finder</h1>
+        <p>Answer the questions to find the social good mission that's the best fit for your skills and passion!</p>
+    </header>
+
+    <div id="quiz-container">
+        <!-- Question Block 1 -->
+        <div class="question-block" id="q1">
+            <p class="question-text">1. How comfortable are you working with technology?</p>
+            
+            <div>
+                <input type="radio" name="q1" id="q1a" value="10" onclick="updateScore()"> 
+                <label for="q1a">Very Comfortable</label>
+            </div>
+            
+            <div>
+                <input type="radio" name="q1" id="q1b" value="5" onclick="updateScore()"> 
+                <label for="q1b">Somewhat Comfortable</label>
+            </div>
+            
+            <div>
+                <input type="radio" name="q1" id="q1c" value="2" onclick="updateScore()"> 
+                <label for="q1c">Not Comfortable</label>
+            </div>
+        </div>
+
+        <!-- Question Block 2 -->
+        <div class="question-block" id="q2">
+            <p class="question-text">2. Which time commitment best fits your schedule?</p>
+            
+            <div>
+                <input type="radio" name="q2" id="q2a" value="10" onclick="updateScore()"> 
+                <label for="q2a">Multiple Days/Week</label>
+            </div>
+            
+            <div>
+                <input type="radio" name="q2" id="q2b" value="5" onclick="updateScore()"> 
+                <label for="q2b">One Day/Week</label>
+            </div>
+            
+            <div>
+                <input type="radio" name="q2" id="q2c" value="2" onclick="updateScore()"> 
+                <label for="q2c">Occasional Events Only</label>
+            </div>
+        </div>
+
+        <!-- Final Submission & Redo -->
+        <div id="submit-block">
+            <button id="submit-btn" onclick="getRecommendation()">Find My Mission!</button>
+            <button id="redo-btn" onclick="resetQuiz()">Redo Quiz</button>
+        </div>
+        
+        <!-- Results Display -->
+        <div id="result-block">
+            <h2 id="mission-title"></h2>
+            <p id="mission-description"></p>
+        </div>
+
+    </div>
+
+    <!-- JavaScript Link -->
+    <script src="quiz.js"></script>
+</body>
+</html>
